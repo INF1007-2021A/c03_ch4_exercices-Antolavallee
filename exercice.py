@@ -2,24 +2,36 @@
 # -*- coding: utf-8 -*-
 
 
+from typing import Counter
+
+
 def is_even_len(string: str) -> bool:
-    return False
+    if (len(string))%2 == 0:
+        return True
 
 
 def remove_third_char(string: str) -> str:
-    return ""
+    new_words = string[:2] + string[3:]
+    return new_words
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    return ""
+    word_change = string.replace(old_char, new_char)
+    return word_change
 
 
 def get_nb_char(string: str, char: str) -> int:
-    return 0
-
+    count = 0
+    
+    for x in string :
+        if x == char :
+            count += 1
+    return count 
 
 def get_nb_words(sentence: str) -> int:
-    return 0
+    nb_spaces = sentence.split(" ")
+    nb_words= len(nb_spaces)
+    return nb_words 
 
 
 def main() -> None:
